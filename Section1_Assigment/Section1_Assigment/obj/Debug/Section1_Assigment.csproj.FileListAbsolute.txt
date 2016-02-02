@@ -1,0 +1,6 @@
+C:\Users\S00735680\Desktop\Section1_Assigment\Section1_Assigment\bin\Debug\Section1_Assigment.exe.config
+C:\Users\S00735680\Desktop\Section1_Assigment\Section1_Assigment\bin\Debug\Section1_Assigment.exe
+C:\Users\S00735680\Desktop\Section1_Assigment\Section1_Assigment\bin\Debug\Section1_Assigment.pdb
+C:\Users\S00735680\Desktop\Section1_Assigment\Section1_Assigment\obj\Debug\Section1_Assigment.csprojResolveAssemblyReference.cache
+C:\Users\S00735680\Desktop\Section1_Assigment\Section1_Assigment\obj\Debug\Section1_Assigment.exe
+C:\Users\S00735680\Desktop\Section1_Assigment\Section1_Assigment\obj\Debug\Section1_Assigment.pdb
