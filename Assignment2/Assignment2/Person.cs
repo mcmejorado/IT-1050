@@ -11,10 +11,9 @@ namespace Assignment2
         public int Age;
         public string FirstName;
         public string LastName;
-        //public Person Spouse = new Person();
-        public string spouseName;
-        public int spouseAge;
+        public Person Spouse;
 
+        public static int HeadCount;
         public static double SumOfAllAges;
 
          public void CollectData(string personNumber)
@@ -32,29 +31,67 @@ namespace Assignment2
              System.Console.Write("Enter Your Age                   : ");
              this.Age = int.Parse(System.Console.ReadLine());
 
-             System.Console.Write("Enter Your Spouse's First Name   : ");
-             this.spouseName = System.Console.ReadLine();
+             this.PrintNameAndAge();
+             //this.GetFullName();
 
-             System.Console.Write("Enter Your Spouse's Age          : ");
-             this.spouseAge = int.Parse(System.Console.ReadLine());
-            
-             System.Console.WriteLine("");
+             SumOfAllAges += this.Age;
+             HeadCount++;             
+         }
+
+         public void CollectDataSpouse()
+         {
+
+             string spouse = "y";
+             bool keepAsking = true;
+
+             while (keepAsking)
+             {
+                System.Console.Write("Do you have spouse y/n : ");
+                spouse = System.Console.ReadLine().ToLower();
+                if (spouse == "y" || spouse == "n")
+                {
+                    keepAsking = false;
+                }
+            }
+
+             if (spouse == "y")
+             {
+                 this.Spouse = new Person();  
+                 this.Spouse.Spouse = this; 
+
+                 System.Console.Write("Enter Your Spouse's First Name   : ");
+                 this.FirstName = System.Console.ReadLine();
+
+                 System.Console.Write("Enter Your Spouse's Age          : ");
+                 this.Age = int.Parse(System.Console.ReadLine());
+
+                 this.PrintNameAndAge();
+                 //this.GetFullName();
+
+                 SumOfAllAges += this.Age;
+                 HeadCount++;
+
+                 System.Console.WriteLine("");                
+             }
          } 
 
-        public string GetFullName(string name, string lastname, int age)
+        //public string GetFullName(string name, string lastname, int age)
+        public string GetFullName()
         {
-            return lastname +", " + name + "(" + age +")";
+            //return lastname +", " + name + " (" + age +")";
+            return this.FirstName + ", " + this.LastName + " (" + this.Age + ")";
         }
   
-        public void PrintNameAndAge(string fullName)
+        //public void PrintNameAndAge(string fullName)
+        public void PrintNameAndAge()
         {
-            System.Console.Write(fullName);
+            System.Console.WriteLine(this.GetFullName());
            
         }
 
-        public void GetAverageAge()
+        public static double GetAverageAge()
         {
-            
+            return (double)SumOfAllAges/(double)HeadCount;        
         }
 
 
