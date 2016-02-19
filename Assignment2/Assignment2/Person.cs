@@ -37,21 +37,7 @@ namespace Assignment2
 
          public void CollectDataSpouse()
          {
-
-             string spouse = "y";
-             bool keepAsking = true;
-
-             while (keepAsking)
-             {
-                System.Console.Write("Do you have spouse y/n : ");
-                spouse = System.Console.ReadLine().ToLower();
-                if (spouse == "y" || spouse == "n")
-                {
-                    keepAsking = false;
-                }
-            }
-
-             if (spouse == "y")
+             if (Utilities.askSpouse() == "y")
              {
                  this.Spouse = new Person();  
                  this.Spouse.Spouse = this; 

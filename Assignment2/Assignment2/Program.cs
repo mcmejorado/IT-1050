@@ -18,15 +18,13 @@ namespace Assignment2
             P1.CollectDataSpouse();                 
             P2.CollectData("p2");                                  
             P2.CollectDataSpouse();
-     
-            System.Console.WriteLine("");
-            System.Console.WriteLine("[Printing Results]");
-            System.Console.WriteLine("");
+
+            Utilities.printHeader();
             
-            P1.PrintNameAndAge();
-            P1.Spouse.PrintNameAndAge();
+            P1.PrintNameAndAge();            
+            if (P1.Spouse != null) { P1.Spouse.PrintNameAndAge(); }            
             P2.PrintNameAndAge();
-            P2.Spouse.PrintNameAndAge();
+            if (P2.Spouse != null) { P2.Spouse.PrintNameAndAge(); }
             
             System.Console.WriteLine("Average Age: " + Person.GetAverageAge());                            
             System.Console.ReadKey();
