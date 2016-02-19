@@ -13,3 +13,6 @@ C:\Users\S00735680.ACAD\Desktop\Assignment2\Assignment2\obj\Debug\Assignment2.pd
 C:\Users\S00735680.ACAD\Desktop\Assignment2\Assignment2\bin\Debug\Assignment2.exe
 C:\Users\S00735680.ACAD\Desktop\Assignment2\Assignment2\bin\Debug\Assignment2.pdb
 C:\Users\S00735680.ACAD\Desktop\Assignment2\Assignment2\obj\Debug\Assignment2.csprojResolveAssemblyReference.cache
+C:\Users\S00735680.ACAD\Desktop\IT-1050\Assignment2\Assignment2\bin\Debug\Assignment2.exe
+C:\Users\S00735680.ACAD\Desktop\IT-1050\Assignment2\Assignment2\bin\Debug\Assignment2.pdb
+C:\Users\S00735680.ACAD\Desktop\IT-1050\Assignment2\Assignment2\obj\Debug\Assignment2.csprojResolveAssemblyReference.cache

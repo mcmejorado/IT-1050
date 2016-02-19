@@ -30,10 +30,7 @@ namespace Assignment2
 
              System.Console.Write("Enter Your Age                   : ");
              this.Age = int.Parse(System.Console.ReadLine());
-
-             this.PrintNameAndAge();
-             //this.GetFullName();
-
+            
              SumOfAllAges += this.Age;
              HeadCount++;             
          }
@@ -65,9 +62,6 @@ namespace Assignment2
                  System.Console.Write("Enter Your Spouse's Age          : ");
                  this.Age = int.Parse(System.Console.ReadLine());
 
-                 this.PrintNameAndAge();
-                 //this.GetFullName();
-
                  SumOfAllAges += this.Age;
                  HeadCount++;
 
@@ -75,14 +69,12 @@ namespace Assignment2
              }
          } 
 
-        //public string GetFullName(string name, string lastname, int age)
+
         public string GetFullName()
         {
-            //return lastname +", " + name + " (" + age +")";
             return this.FirstName + ", " + this.LastName + " (" + this.Age + ")";
         }
   
-        //public void PrintNameAndAge(string fullName)
         public void PrintNameAndAge()
         {
             System.Console.WriteLine(this.GetFullName());
