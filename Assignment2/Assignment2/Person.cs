@@ -49,7 +49,9 @@ namespace Assignment2
                  Spouse.Age = int.Parse(System.Console.ReadLine());
                  
                  SumOfAllAges += Spouse.Age;
-                 HeadCounter++;                                  
+                 HeadCounter++;
+
+                 this.Spouse.Spouse = this;
              }
          } 
 
