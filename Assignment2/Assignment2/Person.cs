@@ -27,9 +27,9 @@ namespace Assignment2
              
              System.Console.Write("Enter Your Last Name             : ");
              this.LastName = System.Console.ReadLine();
-
-             System.Console.Write("Enter Your Age                   : ");
-             this.Age = int.Parse(System.Console.ReadLine());
+             
+             System.Console.Write("Enter Your Age                   : ");             
+             this.Age = int.Parse(System.Console.ReadLine());          
             
              SumOfAllAges += this.Age;
              HeadCounter++;             
