@@ -11,21 +11,22 @@ namespace Assignment2
         static void Main(string[] args)
         {
 
-            Person P1 = new Person();
-            Person P2 = new Person();
+            Person p1 = new Person();
+            Person p2 = new Person();
 
-            P1.CollectData("p1");      
-            P1.CollectDataSpouse();                 
-            P2.CollectData("p2");                                  
-            P2.CollectDataSpouse();
+            p1.CollectData("p1");      
+            p1.CollectDataSpouse();                 
+            p2.CollectData("p2");                                  
+            p2.CollectDataSpouse();
 
             Utilities.printHeader();
             
-            P1.PrintNameAndAge();            
-            if (P1.Spouse != null) { P1.Spouse.PrintNameAndAge(); }            
-            P2.PrintNameAndAge();
-            if (P2.Spouse != null) { P2.Spouse.PrintNameAndAge(); }
-            
+            p1.PrintNameAndAge();
+            if (p1.Spouse != null) { p1.Spouse.PrintNameAndAge(); }            
+            p2.PrintNameAndAge();
+            if (p2.Spouse != null) { p2.Spouse.PrintNameAndAge(); }
+
+            System.Console.WriteLine("");
             System.Console.WriteLine("Average Age: " + Person.GetAverageAge());                            
             System.Console.ReadKey();
 

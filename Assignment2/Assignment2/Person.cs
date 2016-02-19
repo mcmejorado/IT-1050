@@ -13,7 +13,7 @@ namespace Assignment2
         public string LastName;
         public Person Spouse;
 
-        public static int HeadCount;
+        public static int HeadCounter;
         public static double SumOfAllAges;
 
          public void CollectData(string personNumber)
@@ -32,26 +32,24 @@ namespace Assignment2
              this.Age = int.Parse(System.Console.ReadLine());
             
              SumOfAllAges += this.Age;
-             HeadCount++;             
+             HeadCounter++;             
          }
 
          public void CollectDataSpouse()
          {
              if (Utilities.askSpouse() == "y")
              {
-                 this.Spouse = new Person();  
-                 this.Spouse.Spouse = this; 
-
-                 System.Console.Write("Enter Your Spouse's First Name   : ");
-                 this.FirstName = System.Console.ReadLine();
-
-                 System.Console.Write("Enter Your Spouse's Age          : ");
-                 this.Age = int.Parse(System.Console.ReadLine());
-
-                 SumOfAllAges += this.Age;
-                 HeadCount++;
-
-                 System.Console.WriteLine("");                
+                 Spouse = new Person();
+                 
+                 System.Console.Write("Enter Your Spouse's First Name   : ");                                  
+                 Spouse.FirstName = System.Console.ReadLine();
+                 Spouse.LastName = this.LastName;
+                 
+                 System.Console.Write("Enter Your Spouse's Age          : ");                 
+                 Spouse.Age = int.Parse(System.Console.ReadLine());
+                 
+                 SumOfAllAges += Spouse.Age;
+                 HeadCounter++;                                  
              }
          } 
 
@@ -69,7 +67,7 @@ namespace Assignment2
 
         public static double GetAverageAge()
         {
-            return (double)SumOfAllAges/(double)HeadCount;        
+            return (double)SumOfAllAges/(double)HeadCounter;        
         }
 
 
