@@ -22,13 +22,16 @@ namespace Assignment3
             John.SetStudentGrade(Joe,85);
             Mike.SetStudentGrade(Melissa, 90);
             Mike.SetStudentGrade(Matt, 92);
-            
+
+            Utilities.printHeader();
+
             Jane.Print();
             Joe.Print();
             Melissa.Print();
             Matt.Print();
 
-            System.Console.ReadKey();
+            Utilities.printFootNote();
+                   
         }
     }
 }
