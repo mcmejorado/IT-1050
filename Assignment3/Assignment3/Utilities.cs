@@ -11,7 +11,7 @@ namespace Assignment3
 
         public static void printHeader()
         {
-            System.Console.WriteLine("     Student Name       Grade      Teacher Name       Course Name");
+            System.Console.WriteLine("     Student Name       Grade           Teacher Name       Course Name");
         }
 
         public static void printFootNote()

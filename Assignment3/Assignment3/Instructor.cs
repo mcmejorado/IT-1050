@@ -24,7 +24,7 @@ namespace Assignment3
 
         public void PrintTeacher()
         {
-            System.Console.WriteLine("          " + this.name + Utilities.Spaces(this.name) + this.courseName);
+            System.Console.WriteLine(this.name + Utilities.Spaces(this.name) + this.courseName);
         }
 
     }

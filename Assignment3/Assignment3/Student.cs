@@ -25,11 +25,8 @@ namespace Assignment3
         }
 
         public void Print()
-        {
-            System.Console.Write("       ");
-            System.Console.Write(this.name);
-            System.Console.Write(Utilities.Spaces(this.name));
-            System.Console.Write(this.grade);            
+        {            
+            System.Console.Write("       " + this.name + Utilities.Spaces(this.name) + this.grade + Utilities.Spaces(this.grade.ToString()) );            
             teacher.PrintTeacher();                   
         }
 
