@@ -22,12 +22,9 @@ namespace Assignment3
             s1.SetGrade(grade);
         }
 
-        public void Print()
+        public void PrintTeacher()
         {
-            System.Console.Write("Teacher  Name: ");
-            System.Console.WriteLine(this.name);
-            System.Console.Write("Course Name: ");
-            System.Console.WriteLine(this.courseName);
+            System.Console.WriteLine("     Teacher: " + this.name + "     Course Name: " + this.courseName);
         }
 
     }

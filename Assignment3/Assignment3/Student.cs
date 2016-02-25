@@ -9,10 +9,10 @@ namespace Assignment3
     class Student
     {
         private string name;        
-        private string teacher;
+        private Instructor teacher;
         private int grade;
 
-        public Student(string name, string teacher, int grade)
+        public Student(string name, Instructor teacher, int grade)
         {
             this.name = name;
             this.teacher = teacher;
@@ -25,13 +25,9 @@ namespace Assignment3
         }
 
         public void Print()
-        {
-            string space = "     ";
-            System.Console.Write("Student: " + this.name + space);
-            System.Console.Write("Grade:" + this.grade + space);
-            //.Print();
-         
-            System.Console.WriteLine("Teacher: " + this.teacher);            
+        {            
+            System.Console.Write("     Student: " + this.name+  "     Grade: " + this.grade);
+            teacher.PrintTeacher();                   
         }
 
 

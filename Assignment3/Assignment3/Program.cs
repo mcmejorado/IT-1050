@@ -13,15 +13,12 @@ namespace Assignment3
             Instructor John = new Instructor("John", "English");
             Instructor Mike = new Instructor("Mike", "Math");
 
-            Student Jane = new Student("Jane", "John", 0);
-            Student Joe = new Student("Joe", "John", 0);
-            Student Melissa = new Student("Melissa", "Mike", 0);
-            Student Matt = new Student("Matt", "Mike", 0);
+            Student Jane = new Student("Jane", John, 0);
+            Student Joe = new Student("Joe", John, 0);
+            Student Melissa = new Student("Melissa", Mike, 0);
+            Student Matt = new Student("Matt", Mike, 0);
 
             John.SetStudentGrade(Jane, 95);
-            Jane.Print();
-            System.Console.ReadKey();
-
             John.SetStudentGrade(Joe,85);
             Mike.SetStudentGrade(Melissa, 90);
             Mike.SetStudentGrade(Matt, 92);
