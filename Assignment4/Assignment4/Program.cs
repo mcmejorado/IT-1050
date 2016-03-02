@@ -10,18 +10,118 @@ namespace Assignment4
     {
         static void Main(string[] args)
         {
-            const double matineeChild = 3.99;
-            const double matineeAdult = 5.99;
-            const double matineeSenior = 4.50;
-            const double eveningChild = 6.99;
-            const double eveningAdult = 10.99;
-            const double eveningSenior = 8.50
-            const double smallSoda = 3.50;
-            const double largeSoda = 5.99;
-            const double hotDog = 3.99;
-            const double popCorn = 4.50;
-            const double candy = 1.99;
+            double ticketChild;
+            double ticketAdult;
+            double ticketSenior;
 
+            double smallSoda = 3.50;
+            double largeSoda = 5.99;
+            double hotDog = 3.99;
+            double popCorn = 4.50;
+            double candy = 1.99;
+
+            ShowMainMenu();
+            ShowInputPrompt();
+            string option = System.Console.ReadLine();
+            if (option == "1") {
+                ticketChild = 3.99;
+                ticketAdult = 5.99;
+                ticketSenior = 4.50;                
+            }
+            else {
+                ticketChild = 6.99;
+                ticketAdult = 10.99;
+                ticketSenior = 8.50;
+            }
+
+            System.Console.Write("How many Children? ");
+            int numChild = int.Parse((System.Console.ReadLine()));
+            System.Console.Write("How many Adults? ");
+            int numAdult = int.Parse(System.Console.ReadLine());
+            System.Console.Write("How many Seniors? ");
+            int numSenior = int.Parse(System.Console.ReadLine());
+
+            System.Console.Write("How many Small Soda? ");
+            int numSmallSoda = int.Parse(System.Console.ReadLine());
+            System.Console.Write("How many Large Soda? ");
+            int numLargeSoda = int.Parse(System.Console.ReadLine());
+            System.Console.Write("How many Hot Dogs? ");
+            int numHotDog = int.Parse(System.Console.ReadLine());
+            System.Console.Write("How many Pop Corns? ");
+            int numPopCorn = int.Parse(System.Console.ReadLine());
+            System.Console.Write("How many Candies? ");
+            int numCandy = int.Parse(System.Console.ReadLine());
+
+            double totalPrice = 0;
+            double totalTicket = 0;
+            totalTicket = totalTicket + (numChild * ticketChild);
+            totalTicket = totalTicket + (numAdult * ticketAdult);
+            totalTicket = totalTicket + (numSenior * ticketSenior);
+
+            totalPrice = totalPrice + (numSmallSoda * smallSoda);
+            totalPrice = totalPrice + (numLargeSoda * largeSoda);
+            totalPrice = totalPrice + (numHotDog * hotDog);
+            totalPrice = totalPrice + (numPopCorn * popCorn);
+            totalPrice = totalPrice + (numCandy * candy);           
+
+            int ticketDescount = 0;
+            if (numPopCorn >= 1 && numLargeSoda >= 1 )
+            {
+                if(numPopCorn >= numLargeSoda)
+                {
+                    ticketDescount = numPopCorn * 2;
+                }
+                else
+                {
+                    ticketDescount = numLargeSoda * 2;
+                }
+                Console.WriteLine("You got " + ticketDescount + " dollar discont in your tickets");
+            }
+            totalTicket = totalTicket - ticketDescount;
+            totalPrice = totalPrice + totalTicket;
+
+            Console.WriteLine("Total Tickets " + totalTicket);
+            Console.WriteLine("Gran Total " + totalPrice);
+
+            int totalPeople = numChild + numAdult + numSenior;
+            if (option == "2" && totalPeople >= 3)
+            {
+                Console.WriteLine("You got 1 free bag of popcorn");
+            }
+
+            if (numCandy >= 3)
+            {
+                int freeCandy = (int)(numCandy / 3);
+                if (freeCandy == 1)
+                {
+                    Console.WriteLine("You got " + freeCandy + " free candy");
+                }
+                else {
+                    Console.WriteLine("You got " + freeCandy + " free candies");
+                }         
+            }
+
+            Console.ReadKey();
         }
+
+
+        private static void ShowMainMenu()
+        {
+            Console.WriteLine();
+            Console.WriteLine(" +-------------------------------------------+ ");
+            Console.WriteLine(" | Please choose from the following options: | ");
+            Console.WriteLine(" +-------------------------------------------+ ");
+            Console.WriteLine(" | (1) - Matinee                             | ");
+            Console.WriteLine(" | (2) - Evening                             | ");
+            Console.WriteLine(" +-------------------------------------------+ ");
+        }
+
+
+        private static void ShowInputPrompt()
+        {
+            Console.WriteLine();
+            Console.Write(" ---> ");
+        }
+        
     }
 }
