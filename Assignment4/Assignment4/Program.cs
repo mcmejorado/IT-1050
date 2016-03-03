@@ -33,24 +33,25 @@ namespace Assignment4
                 ticketAdult = 10.99;
                 ticketSenior = 8.50;
             }
-
-            System.Console.Write("How many Children? ");
+            Console.WriteLine();
+            System.Console.Write("     * How many Children?    ");
             int numChild = int.Parse((System.Console.ReadLine()));
-            System.Console.Write("How many Adults? ");
+            System.Console.Write("     * How many Adults?      ");
             int numAdult = int.Parse(System.Console.ReadLine());
-            System.Console.Write("How many Seniors? ");
+            System.Console.Write("     * How many Seniors?     ");
             int numSenior = int.Parse(System.Console.ReadLine());
 
-            System.Console.Write("How many Small Soda? ");
+            System.Console.Write("     * How many Small Soda?  ");
             int numSmallSoda = int.Parse(System.Console.ReadLine());
-            System.Console.Write("How many Large Soda? ");
+            System.Console.Write("     * How many Large Soda?  ");
             int numLargeSoda = int.Parse(System.Console.ReadLine());
-            System.Console.Write("How many Hot Dogs? ");
+            System.Console.Write("     * How many Hot Dogs?    ");
             int numHotDog = int.Parse(System.Console.ReadLine());
-            System.Console.Write("How many Pop Corns? ");
+            System.Console.Write("     * How many Pop Corns?   ");
             int numPopCorn = int.Parse(System.Console.ReadLine());
-            System.Console.Write("How many Candies? ");
+            System.Console.Write("     * How many Candies?     ");
             int numCandy = int.Parse(System.Console.ReadLine());
+            Console.WriteLine();
 
             double totalPrice = 0;
             double totalTicket = 0;
@@ -64,29 +65,26 @@ namespace Assignment4
             totalPrice = totalPrice + (numPopCorn * popCorn);
             totalPrice = totalPrice + (numCandy * candy);           
 
-            int ticketDescount = 0;
+            int ticketDiscount = 0;
             if (numPopCorn >= 1 && numLargeSoda >= 1 )
             {
-                if(numPopCorn >= numLargeSoda)
+                if(numPopCorn <= numLargeSoda)
                 {
-                    ticketDescount = numPopCorn * 2;
+                    ticketDiscount = numPopCorn * 2;
                 }
                 else
                 {
-                    ticketDescount = numLargeSoda * 2;
+                    ticketDiscount = numLargeSoda * 2;
                 }
-                Console.WriteLine("You got " + ticketDescount + " dollar discont in your tickets");
+                Console.WriteLine("     >>> You got " + ticketDiscount + " dollar discount in your tickets <<<");
             }
-            totalTicket = totalTicket - ticketDescount;
+            totalTicket = totalTicket - ticketDiscount;
             totalPrice = totalPrice + totalTicket;
-
-            Console.WriteLine("Total Tickets " + totalTicket);
-            Console.WriteLine("Gran Total " + totalPrice);
 
             int totalPeople = numChild + numAdult + numSenior;
             if (option == "2" && totalPeople >= 3)
             {
-                Console.WriteLine("You got 1 free bag of popcorn");
+                Console.WriteLine("     >>> You got 1 free bag of popcorn <<<");
             }
 
             if (numCandy >= 3)
@@ -94,13 +92,16 @@ namespace Assignment4
                 int freeCandy = (int)(numCandy / 3);
                 if (freeCandy == 1)
                 {
-                    Console.WriteLine("You got " + freeCandy + " free candy");
+                    Console.WriteLine("     >>> You got " + freeCandy + " free candy <<<");
                 }
                 else {
-                    Console.WriteLine("You got " + freeCandy + " free candies");
+                    Console.WriteLine("     >>> You got " + freeCandy + " free candies <<<");
                 }         
             }
-
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("     Total Tickets Price = " + totalTicket);
+            Console.WriteLine("     Gran Total          = " + totalPrice);
             Console.ReadKey();
         }
 
@@ -108,19 +109,21 @@ namespace Assignment4
         private static void ShowMainMenu()
         {
             Console.WriteLine();
-            Console.WriteLine(" +-------------------------------------------+ ");
-            Console.WriteLine(" | Please choose from the following options: | ");
-            Console.WriteLine(" +-------------------------------------------+ ");
-            Console.WriteLine(" | (1) - Matinee                             | ");
-            Console.WriteLine(" | (2) - Evening                             | ");
-            Console.WriteLine(" +-------------------------------------------+ ");
+            Console.WriteLine(" ======================================================= ");
+            Console.WriteLine("        What time do you want to watch the movie ?       ");
+            Console.WriteLine(" ======================================================= ");
+            Console.WriteLine();
+            Console.WriteLine("                  (1) - Matinee                          ");
+            Console.WriteLine("                  (2) - Evening                          ");
+            Console.WriteLine();
+            Console.WriteLine(" ======================================================= ");
         }
 
 
         private static void ShowInputPrompt()
         {
             Console.WriteLine();
-            Console.Write(" ---> ");
+            Console.Write("              ---> ");
         }
         
     }
