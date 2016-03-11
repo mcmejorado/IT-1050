@@ -8,9 +8,9 @@ namespace Assignment5
 {
     class Course
     {
-        private string name;
-        private string CRN;
-        private Student[] Students;
+        public string name;
+        public string CRN;
+        public Student[] Students;
 
     }
 }
