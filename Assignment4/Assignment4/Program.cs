@@ -20,9 +20,13 @@ namespace Assignment4
             double popCorn = 4.50;
             double candy = 1.99;
 
-            ShowMainMenu();
-            ShowInputPrompt();
-            string option = System.Console.ReadLine();
+            string option = "0";
+            while (option!= "1" && option!="2")
+            {
+                ShowMainMenu();
+                ShowInputPrompt();
+                option = System.Console.ReadLine();
+           }
             if (option == "1") {
                 ticketChild = 3.99;
                 ticketAdult = 5.99;
@@ -108,6 +112,7 @@ namespace Assignment4
 
         private static void ShowMainMenu()
         {
+            Console.Clear();
             Console.WriteLine();
             Console.WriteLine(" ======================================================= ");
             Console.WriteLine("        What time do you want to watch the movie ?       ");
