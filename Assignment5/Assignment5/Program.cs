@@ -12,20 +12,22 @@ namespace Assignment5
         {
 
             Course course = new Course();
-            Console.WriteLine("What is the name of the course: ");
-            course.name = Console.ReadLine();
-            Console.WriteLine("CRN number");
-            course.CRN = Console.ReadLine();
+            course.AskName();
+            course.AskCRN();
 
-            Console.WriteLine("How many students do you want: ");
-            int numStudents = int.Parse(Console.ReadLine());
-
-            for(int i = 0; i<numStudents; i++)
-            {
-   
-
-            }
+            int numStudents = Questions.AskForInteger("How many students do you want: ");
+            course.SetStudents(numStudents);
+            course.PrintCourse();
+            System.Console.WriteLine("Press a key to continue...");
+            System.Console.ReadKey();
 
         }
+
+        
     }
 }
+
+
+
+
+

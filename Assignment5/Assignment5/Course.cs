@@ -8,20 +8,38 @@ namespace Assignment5
 {
     class Course
     {
-        public string CourseName;
-        public int CRN;
-        public Student[] Students;
+        private string CourseName;
+        private int CRN;
+        private Student[] Students;
 
-        private void AskName()
+        public void AskName()
         {
             CourseName = Questions.AskForString("What is the name of the course"); 
         }
 
-        private void AskCRN()
+        public void AskCRN()
         {
             CRN = Questions.AskForInteger("What is the CRN of the course");
         }
-           
 
+        public void SetStudents(int numStudents)
+        {
+            Students = new Student[numStudents];
+            for (int i = 0; i < numStudents; i++)
+            {
+                Students[i] = new Student();
+                Students[i].SetNumber(Questions.AskForString("Student Number: "));
+                Students[i].SetName(Questions.AskForString("Student Name: "));
+            }
+        }
+
+        public void PrintCourse()
+        {
+            System.Console.WriteLine("[" + this.CRN + "] " + this.CourseName);
+            foreach (Student student in Students)
+            {
+                student.Print();
+            }
+        }
     }
 }

@@ -10,18 +10,18 @@ namespace Assignment5
     {
         private string Name;
         private string SNumber;
-           
+
         public void SetName(string Name)
         {
             this.Name = Name;
-        } 
+        }
 
         public string GetName()
         {
             return Name;
-        }    
-        
-        public void SetNumer(string SNumber)
+        }
+
+        public void SetNumber(string SNumber)
         {
             this.SNumber = SNumber;
         }
@@ -30,9 +30,11 @@ namespace Assignment5
         {
             return SNumber;
         }
-        
+
         public void Print()
         {
             System.Console.WriteLine("[" + this.GetSNumber() + "] " + this.GetName());
         }
+
+    }
 }
