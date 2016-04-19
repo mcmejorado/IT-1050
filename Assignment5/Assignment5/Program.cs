@@ -10,20 +10,25 @@ namespace Assignment5
     {
         static void Main(string[] args)
         {
+            string getIn = "y";
+            while (getIn == "y" )
+            { 
+                Course course = new Course();
+                course.AskName();
+                course.AskCRN();
 
-            Course course = new Course();
-            course.AskName();
-            course.AskCRN();
+                int numStudents = Questions.AskForInteger("How many students do you want: ");
+                course.SetStudents(numStudents);
+                course.PrintCourse();
 
-            int numStudents = Questions.AskForInteger("How many students do you want: ");
-            course.SetStudents(numStudents);
-            course.PrintCourse();
+                getIn = Questions.AskForString("Do you want to start over (y/n) ==> ").ToLower();
+                
+            }
             System.Console.WriteLine("Press a key to continue...");
             System.Console.ReadKey();
-
         }
 
-        
+
     }
 }
 
