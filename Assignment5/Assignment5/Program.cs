@@ -10,6 +10,7 @@ namespace Assignment5
     {
         static void Main(string[] args)
         {
+
             Course course = new Course();
             Console.WriteLine("What is the name of the course: ");
             course.name = Console.ReadLine();
