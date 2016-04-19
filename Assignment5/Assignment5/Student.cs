@@ -8,13 +8,31 @@ namespace Assignment5
 {
     class Student
     {
-        private string name;
-        private string sNumber;
-
-        public Student (string name, string sNumber)
+        private string Name;
+        private string SNumber;
+           
+        public void SetName(string Name)
         {
-            this.name = name;
-            this.sNumber = sNumber;
+            this.Name = Name;
+        } 
+
+        public string GetName()
+        {
+            return Name;
+        }    
+        
+        public void SetNumer(string SNumber)
+        {
+            this.SNumber = SNumber;
         }
-    }
+
+        public string GetSNumber()
+        {
+            return SNumber;
+        }
+        
+        public void Print()
+        {
+            System.Console.WriteLine("[" + this.GetSNumber() + "] " + this.GetName());
+        }
 }
