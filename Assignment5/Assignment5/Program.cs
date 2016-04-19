@@ -12,7 +12,10 @@ namespace Assignment5
         {
             string getIn = "y";
             while (getIn == "y" )
-            { 
+            {
+                System.Console.Clear();
+                Questions.printHeader();
+
                 Course course = new Course();
                 course.AskName();
                 course.AskCRN();
@@ -21,7 +24,7 @@ namespace Assignment5
                 course.SetStudents(numStudents);
                 course.PrintCourse();
 
-                getIn = Questions.AskForString("Do you want to start over (y/n) ==> ").ToLower();
+                getIn = Questions.AskForString("Do you want to start over (y/n)").ToLower();
                 
             }
             System.Console.WriteLine("Press a key to continue...");

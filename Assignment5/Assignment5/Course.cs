@@ -28,8 +28,8 @@ namespace Assignment5
             for (int i = 0; i < numStudents; i++)
             {
                 Students[i] = new Student();
-                Students[i].SetNumber(Questions.AskForString("Student Number: "));
-                Students[i].SetName(Questions.AskForString("Student Name: "));
+                Students[i].SetNumber(Questions.AskForString("Student Number"));
+                Students[i].SetName(Questions.AskForString("Student Name"));
             }
         }
 

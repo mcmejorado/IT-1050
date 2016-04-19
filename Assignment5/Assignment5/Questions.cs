@@ -10,13 +10,18 @@ namespace Assignment5
     {
         public static string AskForString(string prompt)
         {
-            System.Console.Write(prompt.PadRight(35) + ": ");
+            System.Console.Write("     " + prompt.PadRight(35) + "=> ");
             return System.Console.ReadLine();
         }
 
         public static int AskForInteger(string prompt)
         {
             return int.Parse(AskForString(prompt));
+        }
+
+        public static void printHeader()
+        {
+            System.Console.WriteLine("              ==== Creating a Course ====");
         }
     }
 }
