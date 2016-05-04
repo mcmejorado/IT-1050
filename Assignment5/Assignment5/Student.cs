@@ -33,7 +33,7 @@ namespace Assignment5
 
         public void Print()
         {
-            System.Console.WriteLine("[" + this.GetSNumber() + "] " + this.GetName());
+            System.Console.WriteLine("   [" + this.GetSNumber() + "] " + this.GetName());
         }
 
     }

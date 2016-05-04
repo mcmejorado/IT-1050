@@ -11,7 +11,7 @@ namespace Assignment5
         static void Main(string[] args)
         {
             string getIn = "y";
-            while (getIn == "y" )
+            while (getIn == "y" || getIn == "Y")
             {
                 System.Console.Clear();
                 Questions.printHeader();
@@ -24,6 +24,7 @@ namespace Assignment5
                 course.SetStudents(numStudents);
                 course.PrintCourse();
 
+                System.Console.WriteLine();
                 getIn = Questions.AskForString("Do you want to start over (y/n)").ToLower();
                 
             }

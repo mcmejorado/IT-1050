@@ -24,6 +24,7 @@ namespace Assignment5
 
         public void SetStudents(int numStudents)
         {
+            Console.WriteLine();
             Students = new Student[numStudents];
             for (int i = 0; i < numStudents; i++)
             {
@@ -35,7 +36,12 @@ namespace Assignment5
 
         public void PrintCourse()
         {
-            System.Console.WriteLine("[" + this.CRN + "] " + this.CourseName);
+            System.Console.WriteLine();
+            System.Console.WriteLine("      CRN" + "        Course Name");
+            System.Console.WriteLine("     [" + this.CRN + "]  " + this.CourseName);
+            System.Console.WriteLine();
+            System.Console.WriteLine("      ==== Students ====");
+            System.Console.WriteLine();
             foreach (Student student in Students)
             {
                 student.Print();
