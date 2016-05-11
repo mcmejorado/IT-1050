@@ -45,7 +45,7 @@ namespace FinalExam
             return MaxWeight += MaxWeight;
         }
 
-        public Boolean IsOverMaxCapacity()
+        public bool IsOverMaxCapacity()
         {
             return GetCurrentWeight() > MaxWeight;
         }           
