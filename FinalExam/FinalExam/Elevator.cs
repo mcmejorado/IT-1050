@@ -42,7 +42,12 @@ namespace FinalExam
 
         public double GetCurrentWeight()
         {
-            return MaxWeight += MaxWeight;
+            double totalWeight = 0;
+            for (var i=0; i<Occupants.Length; i++ )
+            {
+                totalWeight = totalWeight + Occupants[i].GetWeight();
+            }
+            return totalWeight;
         }
 
         public bool IsOverMaxCapacity()

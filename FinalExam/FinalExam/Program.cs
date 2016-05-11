@@ -33,6 +33,7 @@ namespace FinalExam
             Passenger passenger1 = new Passenger("A2", 220);
             elevator1.AddOccupant(passenger1, 1);
             bool elevator1IsOverMaxCapacity = elevator1.IsOverMaxCapacity(); //must be false
+            System.Console.WriteLine("Elevator1 is over max capacity? " + elevator1IsOverMaxCapacity);
 
             Elevator elevator2 = new Elevator(3,600);
             Passenger passenger2 = new Passenger("A1", 200);
@@ -40,9 +41,10 @@ namespace FinalExam
             Passenger passenger3 = new Passenger("A2", 200);
             elevator2.AddOccupant(passenger3, 1);
             Passenger passenger4 = new Passenger("A3", 201);
-            elevator2.AddOccupant(passenger2, 2);
+            elevator2.AddOccupant(passenger4, 2);
             bool elevator2IsOverMaxCapacity = elevator2.IsOverMaxCapacity(); //must be true
-            
+            System.Console.WriteLine("Elevator2 is over max capacity? " + elevator2IsOverMaxCapacity);
+            System.Console.ReadKey();
         }
     }
 }
